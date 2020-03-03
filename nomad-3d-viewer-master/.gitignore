@@ -1,0 +1,13 @@
+.idea/
+.settings/
+node_modules/
+runners
+build/
+doc/
+*.bat
+stdout.log
+stderr.log
+*~
+
+/nbproject/private/
+release-builds/

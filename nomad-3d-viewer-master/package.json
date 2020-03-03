@@ -1,0 +1,50 @@
+{
+  "name": "nomad-3d-viewer",
+  "version": "0.2.2",
+  "main": "js/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://code.ill.fr/instrument-control/protos/nomad-3d/nomad-3d-viewer.git"
+  },
+  "devDependencies": {
+    "electron-installer-dmg": "^2.0.0",
+    "electron-packager": "^13.1.1",
+    "electron-rebuild": "^1.8.6"
+  },
+  "dependencies": {
+    "buffer": "^5.4.3",
+    "buffer-to-arraybuffer": "0.0.5",
+    "cheers-alert": "^1.4.1",
+    "dat-desktop": "^1.0.1",
+    "dat.gui": "^0.7.6",
+    "electron": "^6.1.0",
+    "electron-localshortcut": "^3.1.0",
+    "fast-xml-parser": "^3.13.0",
+    "file-saver": "^2.0.2",
+    "he": "^1.2.0",
+    "jquery": "^3.4.1",
+    "js-alert": "^1.0.4",
+    "notyf-js": "^2.1.2",
+    "pubsub-js": "^1.7.0",
+    "sweetalert2": "^8.18.5",
+    "three": "^0.109.0",
+    "three-dragcontrols": "^0.88.2",
+    "three-fps-counter": "^0.2.0",
+    "three-orbitcontrols": "^2.108.1",
+    "three-stl-loader": "^1.0.6",
+    "three-transformcontrols": "^0.78.1",
+    "three-window-resize": "^1.0.4",
+    "threejs-export-stl": "0.0.4",
+    "toaster-js": "^2.2.0",
+    "vue-notif": "^1.1.10",
+    "vuemit": "^1.0.9"
+  },
+  "scripts": {
+    "rebuild": "node-gyp rebuild --target=6.1.0 --arch=x64 --dist-url=https://electronjs.org/headers --nomad=true --collisions=true;sudo chown root ./node_modules/electron/dist/chrome-sandbox;sudo chmod 4755 ./node_modules/electron/dist/chrome-sandbox",
+    "start": "ENV=development electron .",
+    "doc": "jsdoc -r -R README.md -d doc/ js/n3d/",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --app-version=0.2.2 --icon=img/nomad-icon.png --prune=true --out=release-builds",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64  --app-version=0.2.2 --icon=img/nomad-icon.png --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/darwin-x64/nomad-3d-viewer.app/ nomad-3d-viewer-0.2.2 --out=release-builds --overwrite --icon=img/icon.icns"
+  }
+}

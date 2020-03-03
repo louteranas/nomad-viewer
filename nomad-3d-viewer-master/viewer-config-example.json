@@ -1,0 +1,12 @@
+{
+	"name": "nomad-3d-viewer",
+	"localEndpoint": "tcp://gamma15:7000",
+	"nomadEndpoint": "tcp://gamma15:8000",
+	"modelPath": "/users/legoc/nomad3d/SOLIDWORKS_models/Test-converted/full-viewer.xml",
+	"instrumentPosition": {
+		"x": 0,
+		"y": 0,
+		"z": 60
+	},
+	"minDeltaTime": 50
+}

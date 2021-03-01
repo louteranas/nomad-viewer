@@ -27,7 +27,7 @@
     "notyf-js": "^2.1.2",
     "pubsub-js": "^1.7.0",
     "sweetalert2": "^8.18.5",
-    "three": "^0.109.0",
+    "three": "^0.125.0",
     "three-dragcontrols": "^0.88.2",
     "three-fps-counter": "^0.2.0",
     "three-orbitcontrols": "^2.108.1",
